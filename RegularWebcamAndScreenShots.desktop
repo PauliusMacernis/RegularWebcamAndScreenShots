@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Regular webcam and screen shots
+Exec=systemctl --user start RegularWebcamAndScreenShots.service
+Comment=Starts RegularWebcamAndScreenShots. Your screen and webcam area is now to be captured regularly.
+X-GNOME-Autostart-enabled=true

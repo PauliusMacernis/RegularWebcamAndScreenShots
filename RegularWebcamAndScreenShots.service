@@ -1,0 +1,15 @@
+[Unit]
+Description=Makes a webcam and screen shot every few minutes
+
+[Service]
+ExecStart=/usr/bin/RegularWebcamAndScreenShots.sh
+# PrivateNetwork=yes
+# PrivateTmp=yes
+# ProtectSystem=full
+# ProtectHome=yes
+# PrivateDevices=yes
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+# WantedBy=multi-user.target
