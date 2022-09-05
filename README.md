@@ -1,5 +1,8 @@
 # RegularWebcamAndScreenShots
-Makes a webcam and screen shot every 5 minutes
+Makes a webcam and screen shot every 5 minutes  
+
+# WARNING
+Make sure you keep the captured content in the extremly safe location because the captured content may reveal sensitive information. For example, screenshots may reveal passwords, source of a highly secure software you may work with, private meeting content, and so on; the taken webcam pictures may reveal your life schedule, sensitive life scenes, people who wants to stay private, and so on. Be caucious!
 
 # Install for Ubuntu 22.04
 
