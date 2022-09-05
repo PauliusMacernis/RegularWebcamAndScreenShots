@@ -6,8 +6,6 @@ Make sure you keep the captured content in the extremly safe location because th
 
 # Install for Ubuntu 22.04
 
-Installs the script.
-
 ## Install Dependencies
 
 `sudo apt-get install scrot` (for printscreen)  
