@@ -1,13 +1,13 @@
 # RegularWebcamAndScreenShots
 Makes a webcam and screen shot every 5 minutes
 
-# Install for Ubuntu 22.04
+# Install for Ubuntu 24.04
 
 Installs the script.
 
 ## Install Dependencies
 
-`sudo apt-get install scrot` (for printscreen)  
+`sudo apt-get install grim` (for screenshots, Wayland-native; replaces `scrot` which only works on X11)  
 
 `sudo apt-get install fswebcam` (for webcam shots)  
 
@@ -80,6 +80,24 @@ Check directories for a one image created in the each directory every 5 minutes:
 
 `sudo systemctl status RegularWebcamAndScreenShots.service` - verify it's running now  
  -->
+
+# Updating an existing installation
+
+Pull the latest changes and re-apply them to the system:
+
+```
+cd ~/dev/RegularWebcamAndScreenShots \
+&& git pull \
+&& sudo apt-get install -y grim \
+&& sudo cp ~/dev/RegularWebcamAndScreenShots/RegularWebcamAndScreenShots.sh /usr/bin/RegularWebcamAndScreenShots.sh \
+&& sudo cp ~/dev/RegularWebcamAndScreenShots/RegularWebcamAndScreenShots.service ~/.config/systemd/user/RegularWebcamAndScreenShots.service \
+&& sudo cp ~/dev/RegularWebcamAndScreenShots/RegularWebcamAndScreenShots.desktop ~/.config/autostart/RegularWebcamAndScreenShots.desktop \
+&& sudo chmod +x /usr/bin/RegularWebcamAndScreenShots.sh \
+&& sudo systemctl daemon-reload \
+&& systemctl --user daemon-reload \
+&& systemctl --user restart RegularWebcamAndScreenShots.service \
+&& systemctl --user status RegularWebcamAndScreenShots.service
+```
 
 # In case you modify the script.. run this each time you do so
 
