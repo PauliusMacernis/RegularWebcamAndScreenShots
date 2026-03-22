@@ -8,9 +8,9 @@ Make sure you keep the captured content in the extremly safe location because th
 
 ## Install Dependencies
 
-`sudo apt-get install grim` (for screenshots, Wayland-native; replaces `scrot` which only works on X11)  
+`sudo apt-get install fswebcam` (for webcam shots)
 
-`sudo apt-get install fswebcam` (for webcam shots)  
+Screenshots are taken via `gdbus` calling the `org.gnome.Shell.Screenshot` DBus interface, which is built into GNOME Shell — no extra install needed. This works natively on GNOME Wayland (Ubuntu 24.04 default). Neither `scrot` (X11-only) nor `grim` (requires wlr-screencopy, not supported by GNOME) work on GNOME Wayland.
 
 ## Prepare directories for the content
 
@@ -89,7 +89,6 @@ Pull the latest changes and re-apply them to the system:
 ```
 cd ~/dev/RegularWebcamAndScreenShots \
 && git pull \
-&& sudo apt-get install -y grim \
 && sudo cp ~/dev/RegularWebcamAndScreenShots/RegularWebcamAndScreenShots.sh /usr/bin/RegularWebcamAndScreenShots.sh \
 && sudo cp ~/dev/RegularWebcamAndScreenShots/RegularWebcamAndScreenShots.service ~/.config/systemd/user/RegularWebcamAndScreenShots.service \
 && sudo cp ~/dev/RegularWebcamAndScreenShots/RegularWebcamAndScreenShots.desktop ~/.config/autostart/RegularWebcamAndScreenShots.desktop \
